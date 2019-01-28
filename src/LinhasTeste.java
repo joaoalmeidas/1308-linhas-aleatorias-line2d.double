@@ -7,8 +7,8 @@ public class LinhasTeste {
 		JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		Linhas circ10 = new Linhas();
-		frame.add(circ10);
+		Linhas linha = new Linhas();
+		frame.add(linha);
 		frame.setSize(500, 500);
 		frame.setVisible(true);
 		

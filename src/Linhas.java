@@ -1,7 +1,7 @@
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.geom.Ellipse2D;
+import java.awt.geom.Line2D;
 import java.security.SecureRandom;
 
 import javax.swing.JPanel;
@@ -18,16 +18,13 @@ public class Linhas extends JPanel{
 		final int centroX = getWidth()/2 - 5;
 		final SecureRandom aleatorio = new SecureRandom();
 		
-		g2d.setColor(Color.RED);
-		g2d.drawLine(centroX + 10, centroY + 5, centroX + 20, centroY + 5);
 		
-
-		
-		for(int i = 0; i < 100; i+=10) {
+		for(int i = 0; i < aleatorio.nextInt(10000000); i++) {
 			
 			g2d.setColor(new Color(aleatorio.nextInt(256), aleatorio.nextInt(256), aleatorio.nextInt(256)));
 			
-			g2d.draw(new Ellipse2D.Double(centroX - i, centroY - i, 10 + i * 2, 10 + i * 2));
+			g2d.draw(new Line2D.Double(aleatorio.nextInt(getWidth()), aleatorio.nextInt(getHeight()), 
+					aleatorio.nextInt(getWidth()), aleatorio.nextInt(getHeight())));
 			
 		}
 		
