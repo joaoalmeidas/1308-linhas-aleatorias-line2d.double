@@ -1,3 +1,4 @@
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -22,6 +23,8 @@ public class Linhas extends JPanel{
 		for(int i = 0; i < aleatorio.nextInt(10000000); i++) {
 			
 			g2d.setColor(new Color(aleatorio.nextInt(256), aleatorio.nextInt(256), aleatorio.nextInt(256)));
+			
+			g2d.setStroke(new BasicStroke(1 + aleatorio.nextInt(50)));
 			
 			g2d.draw(new Line2D.Double(aleatorio.nextInt(getWidth()), aleatorio.nextInt(getHeight()), 
 					aleatorio.nextInt(getWidth()), aleatorio.nextInt(getHeight())));
